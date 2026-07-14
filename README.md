@@ -4,10 +4,11 @@
 
 ```
 Sources/
-├── Main.swift           // Точка входа
+├── main.swift           // Точка входа
 ├── Menu.swift           // Оркестратор и меню программы
 ├── Errors.swift         // Пользовательские ошибки
 ├── TwinPrimes.swift     // Задание №1
+├── Palindrome.swift     // Задание №2
 ```
 
 ---
