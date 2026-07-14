@@ -1,3 +1,7 @@
 import Foundation
 
-Menu.run()
+do {
+    try Menu.run()
+} catch {
+    print("Ошибка")
+}
