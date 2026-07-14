@@ -19,6 +19,7 @@ struct Menu {
         Практические задания
         =====================
         1. Числа-близнецы
+        2. Проверка на палиндром
         """)
 
         guard let input = readLine(),
@@ -47,6 +48,12 @@ struct Menu {
                     }
                 }
             }
+        case 2:
+            print("Введите строку")
+            guard let input = readLine() else {
+                throw Errors.emptyInput
+            }
+            Palindrome.run(input: input)
 
         default:
             print("Такого пункта меню нет.")
