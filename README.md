@@ -103,6 +103,92 @@ run()
 
 <img width="276" height="192" alt="Снимок экрана — 2026-07-14 в 20 25 08" src="https://github.com/user-attachments/assets/c7d0cfa4-1b11-4378-a724-490a5024f369" />
 
+### ✅ Задание №3. Анализ списков оборудования
+
+**Описание**
+
+Реализована программа, которая проводит анализ двух списков оборудования.
+
+Для хранения исходных данных и выполнения запросов используется база данных SQLite. Интеграция SQLite в Swift-проект выполнена с помощью библиотеки SQLite.swift.
+
+Запуск задания осуществляется через главное меню программы.
+
+Программа выполняет следующие действия:
+
+* создаёт подключение к базе данных SQLite;
+* создаёт таблицы оборудования и расположения оборудования;
+* заполняет таблицы исходными данными;
+* объединяет данные таблиц по инвентарному номеру;
+* выводит полный список оборудования;
+* принимает от пользователя название офиса;
+* формирует новый список оборудования, расположенного в указанном офисе.
+
+**Структура базы данных**
+
+```text
+Equipment
+├── inventory_number — PRIMARY KEY
+└── equipment
+
+EquipmentLocation
+├── inventory_number — PRIMARY KEY, FOREIGN KEY
+└── location
+```
+
+Таблицы связаны между собой по полю `inventory_number`.
+
+**Структура решения**
+
+```text
+Menu
+└── выбор задания №3
+     │
+     ▼
+Equipment
+└── run()
+     │
+     ▼
+DatabaseFactory
+└── createDatabase()
+     │
+     ▼
+DatabaseManager
+├── createTables()
+├── seedDatabase()
+├── showAllTables()
+└── showLocatedEquipment()
+```
+
+**Использованные возможности Swift**
+
+* Structures
+* Static Methods
+* Access Control
+* Error Handling (`throws`)
+* Optionals
+* Tuples
+* Arrays
+* Functions
+* String Interpolation
+* Generics
+
+**Использованные технологии**
+
+* Swift
+* SQLite
+* SQLite.swift
+* Swift Package Manager
+* Xcode
+* Git
+* GitHub
+
+## Результаты работы
+
+<img width="431" height="513" alt="Снимок экрана — 2026-07-20 в 15 43 56" src="https://github.com/user-attachments/assets/22ef0d61-f1c5-4cd8-9139-8f22bf755743" />
+
+<img width="440" height="513" alt="Снимок экрана — 2026-07-20 в 15 44 53" src="https://github.com/user-attachments/assets/76d83450-96e2-4a15-b0e9-e00d8f11609b" />
+
+
 ## Используемые технологии
 
 * Swift
