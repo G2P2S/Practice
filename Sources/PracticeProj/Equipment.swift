@@ -1,7 +1,14 @@
-//
-//  Equipment.swift
-//  PracticeProj
-//
-//  Created by Maksim Knikhuta on 10.07.2026.
-//
-
+struct Equipment {
+    static func run() throws {
+        let factory = DatabaseFactory()
+        let database = try factory.createDatabase()
+        print("Входные списки:")
+        try database.showAllTables()
+        print("Введите офис для просмотра имеющегося оборудрвания:")
+        if let location = readLine() {
+            try database.showLocatedEquipment(location: location)
+        } else {
+            throw Errors.emptyInput
+        }
+    }
+}

@@ -20,6 +20,7 @@ struct Menu {
         =====================
         1. Числа-близнецы
         2. Проверка на палиндром
+        3. Списиок оборудования
         """)
 
         guard let input = readLine(),
@@ -48,12 +49,16 @@ struct Menu {
                     }
                 }
             }
+            
         case 2:
             print("Введите строку")
             guard let input = readLine() else {
                 throw Errors.emptyInput
             }
             Palindrome.run(input: input)
+            
+        case 3:
+            try Equipment.run()
 
         default:
             print("Такого пункта меню нет.")

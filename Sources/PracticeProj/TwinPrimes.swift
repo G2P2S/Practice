@@ -31,7 +31,8 @@ struct TwinPrimes {
         var twins: [(Int,Int)] = []
         for number in initialNumber...finalNumber-2 {
             let pair:Int = number+2
-            if isPrime(number: number) && isPrime(number: pair) { twins.append((number,pair)) }
+            if isPrime(number: number) && isPrime(number: pair) { twins.append((number,pair))
+            }
         }
         return twins
     }
