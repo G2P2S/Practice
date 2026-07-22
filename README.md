@@ -4,12 +4,19 @@
 
 ```
 Sources/
-├── main.swift           // Точка входа
-├── Menu.swift           // Оркестратор и меню программы
-├── Errors.swift         // Пользовательские ошибки
-├── TwinPrimes.swift     // Задание №1
-├── Palindrome.swift     // Задание №2
-├── Equipment.swift     // Задание №3
+└── PracticeProj/
+    ├── main.swift                  // Точка входа
+    ├── Menu.swift                  // Оркестратор и меню программы
+    ├── Errors.swift                // Пользовательские ошибки
+    ├── TwinPrimes.swift            // Задание №1
+    ├── Palindrome.swift            // Задание №2
+    ├── Equipment.swift             // Задание №3
+    ├── Deposit.swift               // Задание №4
+    ├── MatrixTranspose.swift       // Задание №5
+    ├── SumFinder.swift             // Задание №6
+    └── Database/
+        ├── DatabaseManager.swift   // Работа с базой данных SQLite
+        └── DatabaseFactory.swift   // Создание и инициализация базы данных
 ```
 
 ---
