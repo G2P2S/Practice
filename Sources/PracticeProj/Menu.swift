@@ -1,3 +1,5 @@
+import Foundation
+
 struct Menu {
     
     private static func askYesNo (answer: String) throws -> Bool {
@@ -21,6 +23,7 @@ struct Menu {
         1. Числа-близнецы
         2. Проверка на палиндром
         3. Списиок оборудования
+        4. Рассчет вклада
         """)
 
         guard let input = readLine(),
@@ -36,7 +39,7 @@ struct Menu {
                 do {
                     try TwinPrimes.run()
                 } catch {
-                   print("Ошибка")
+                   print("Ошибка.")
                 }
             } else {
                 print("Введите диапазон:")
@@ -59,9 +62,30 @@ struct Menu {
             
         case 3:
             try Equipment.run()
+            
+        case 4:
+            let useDefault = try askYesNo(answer: "Ипользовать значение для рассчета вклада\n по умолчанию 150000₽ под 16% на 5 лет (60 месяцев)? (y/n)")
+            if useDefault {
+                do {
+                    try Deposit.run()
+                } catch {
+                    print("Ошибка")
+                }
+            } else {
+                print("Введите предполагаемую сумму депозита и длительность вклада в месяцах:")
+                if let initialDeposit = readLine().flatMap({ Decimal(string: $0) }),
+                   let months = readLine().flatMap(Int.init) {
+                    do {
+                        try Deposit.run(initialDeposit: initialDeposit, months: months)
+                    } catch {
+                        print("Ошибка.")
+                    }
+                } else { throw Errors.invalidInput }
+            }
 
         default:
             print("Такого пункта меню нет.")
+            throw Errors.invalidInput
         }
     }
 }
