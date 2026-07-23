@@ -25,6 +25,7 @@ struct Menu {
         3. Списиок оборудования
         4. Расчет вклада
         5. Транспонирование матрицы
+        6. Поиск комбинации чисел с заданной суммой
         """)
 
         guard let input = readLine(),
@@ -65,7 +66,7 @@ struct Menu {
             try Equipment.run()
             
         case 4:
-            let useDefault = try askYesNo(answer: "Ипользовать значение для рассчета вклада\n по умолчанию 150000₽ под 16% на 5 лет (60 месяцев)? (y/n)")
+            let useDefault = try askYesNo(answer: "Ипользовать значение для рассчета вклада\n по умолчанию: 150000₽ под 16% на 5 лет (60 месяцев)? (y/n)")
             if useDefault {
                 do {
                     try Deposit.run()
@@ -99,6 +100,12 @@ struct Menu {
                     print("Ошибка")
                 }
             }
+            
+        case 6:
+            print("Введите желаемое число для поиска оптимальной комбинации:")
+            if let number = readLine().flatMap(Int.init) {
+                SumFinder.run(number: number)
+            } else { throw Errors.invalidInput }
 
         default:
             print("Такого пункта меню нет.")
