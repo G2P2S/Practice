@@ -435,11 +435,12 @@ bestNumbers = пустой массив
 
 ### Поиск комбинации для заданной суммы
 
-<img width="543" height="306" alt="Снимок экрана — 2026-07-23 в 07 21 50" src="https://github.com/user-attachments/assets/ecdc8d5e-c48e-408f-a9ca-70a671b3cb3b" />
+<img width="636" height="315" alt="Снимок экрана — 2026-07-23 в 07 32 03" src="https://github.com/user-attachments/assets/3302f77d-f32b-4e8d-8d62-c8eec49f65f3" />
 
-<img width="539" height="310" alt="Снимок экрана — 2026-07-23 в 07 23 10" src="https://github.com/user-attachments/assets/8c2f25fc-6d81-45c5-9505-af433c6cc078" />
+<img width="638" height="307" alt="Снимок экрана — 2026-07-23 в 07 32 32" src="https://github.com/user-attachments/assets/f2c88434-4912-4f7f-811e-7e931ae5378a" />
 
-<img width="669" height="311" alt="Снимок экрана — 2026-07-23 в 07 23 55" src="https://github.com/user-attachments/assets/2d55ba3d-5f47-4254-8ab2-642b81eb6f6f" />
+<img width="638" height="309" alt="Снимок экрана — 2026-07-23 в 07 33 14" src="https://github.com/user-attachments/assets/069cd483-7439-447c-b7a0-57d0a1860363" />
+
 
 **Использованные технологии**
 
