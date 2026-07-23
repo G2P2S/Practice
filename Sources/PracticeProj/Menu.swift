@@ -23,7 +23,8 @@ struct Menu {
         1. Числа-близнецы
         2. Проверка на палиндром
         3. Списиок оборудования
-        4. Рассчет вклада
+        4. Расчет вклада
+        5. Транспонирование матрицы
         """)
 
         guard let input = readLine(),
@@ -81,6 +82,22 @@ struct Menu {
                         print("Ошибка.")
                     }
                 } else { throw Errors.invalidInput }
+            }
+            
+        case 5:
+            let useDefault = try askYesNo(answer: "Использовать значения матрицы по умолчанию? (y/n)")
+            if useDefault {
+                do {
+                    try MatrixTranspose.runDefault()
+                } catch {
+                    print("Ошибка")
+                }
+            } else {
+                do {
+                    try MatrixTranspose.run()
+                } catch {
+                    print("Ошибка")
+                }
             }
 
         default:
