@@ -1,7 +1,7 @@
 struct SumFinder {
     static func run(number: Int) {
         let bestNumbers = findClosest(number: number, sequence: SumFinder.sequence)
-        print("Максимально приближенные числа, сумма которых равна или\n максиально близка к заданной последовательности: \(bestNumbers.2)")
+        print("Максимально подходящие числа исходной последовательности, сумма которых равна или\n максиально близка к заданному числу: \(bestNumbers.2)")
         print("Их сумма: \(bestNumbers.1)")
         print("Разница между суммой и исходным числом: \(bestNumbers.0)")
     }
