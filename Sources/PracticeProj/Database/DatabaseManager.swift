@@ -61,6 +61,33 @@ struct DatabaseManager {
         }
     }
     
+    func showOriginalTables() throws {
+        let equipmentListStatement = try self.connection.prepare("""
+            SELECT * FROM Equipment
+            """)
+        let eqipmentLocationStatement = try self.connection.prepare("""
+            SELECT * FROM EquipmentLocation
+            """)
+        
+        print("Таблица 1:")
+        
+        for equipment in equipmentListStatement {
+            if let equipmentId = equipment[0],
+               let equipmentName = equipment[1] {
+                print("\(equipmentId)  \(equipmentName)")
+            }
+        }
+        
+        print("Таблица 2:")
+        
+        for equipment in eqipmentLocationStatement {
+            if let equipmentId = equipment[0],
+               let equipmentLocation = equipment[1] {
+                print("\(equipmentId)  \(equipmentLocation)")
+            }
+        }
+    }
+    
     func showLocatedEquipment(location: String) throws {
         let equipmentStatement = try self.connection.prepare("""
             SELECT 

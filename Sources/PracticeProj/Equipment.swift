@@ -3,7 +3,7 @@ struct Equipment {
         let factory = DatabaseFactory()
         let database = try factory.createDatabase()
         print("Входные списки:")
-        try database.showAllTables()
+        try database.showOriginalTables()
         print("Введите офис для просмотра имеющегося оборудрвания:")
         if let location = readLine() {
             try database.showLocatedEquipment(location: location)
