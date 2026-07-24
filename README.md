@@ -186,6 +186,10 @@ DatabaseManager
 
 <img width="440" height="513" alt="Снимок экрана — 2026-07-20 в 15 44 53" src="https://github.com/user-attachments/assets/76d83450-96e2-4a15-b0e9-e00d8f11609b" />
 
+## Обновленный вариант пользовательского отображения входных данных
+
+<img width="419" height="829" alt="Снимок экрана — 2026-07-24 в 15 57 12" src="https://github.com/user-attachments/assets/deadf6f5-6d26-4671-968f-f97a630ad0a4" />
+
 ### ✅ Задание №4. Расчёт величины банковского вклада
 
 **Описание**
